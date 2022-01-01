@@ -10,7 +10,7 @@
     "watch": "tsc --watch",
     "defs": "wget https://github.com/danielyxie/bitburner/raw/dev/src/ScriptEditor/NetscriptDefinitions.d.ts -O NetscriptDefinitions.d.ts",
     "clean": "rm -rf ./dist/*",
-    "serve": "serve ./dist"
+    "serve": "serve ."
   },
   "dependencies": {},
   "devDependencies": {

@@ -1,0 +1,15 @@
+{
+    "name": "bbpm-official",
+    "packages": [
+        {
+            "name": "bbpm",
+            "description": "The official BBPM package. Useful to allow bbpm to self-update.",
+            "version": "v0.1.0",
+            "author": "jojotastic777",
+            "dependencies": [],
+            "manifest": {
+                "/bin/bbpm.js": "http://127.0.0.1:3000/dist/bin/bbpm.js"
+            }
+        }
+    ]
+}
