@@ -1,0 +1,23 @@
+{
+  "name": "bitburner-bppm",
+  "version": "0.1.0",
+  "description": "An experimental package manager for the game Bitburner.",
+  "repository": "git@github.com:jojotastic777/bitburner-bppm.git",
+  "author": "jojotastic777 <jojotastic777@gmail.com>",
+  "license": "GNU GPL v3",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "defs": "wget https://github.com/danielyxie/bitburner/raw/dev/src/ScriptEditor/NetscriptDefinitions.d.ts -O NetscriptDefinitions.d.ts",
+    "clean": "rm -rf ./dist/*",
+    "serve": "serve ./dist"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "eslint": "^8.6.0",
+    "serve": "^13.0.2",
+    "typescript": "^4.5.4"
+  }
+}

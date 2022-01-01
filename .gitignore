@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Netscript Definitions file
+NetscriptDefinitions.d.ts
