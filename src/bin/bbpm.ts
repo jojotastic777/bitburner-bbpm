@@ -1,6 +1,6 @@
 import { NS } from "/../NetscriptDefinitions.js"
 
-const DEFAULT_PACKAGE_LIST_URL = "http://127.0.0.1:3000/.bbpm/package-list.json"
+const DEFAULT_PACKAGE_LIST_URL = "https://raw.githubusercontent.com/jojotastic777/bitburner-bbpm/master/.bbpm/package-list.json"
 
 type PackageList = {
     name: string
