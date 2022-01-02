@@ -252,6 +252,11 @@ const USAGE_STRING = [
 ].join("\n")
 
 type Command = "help" | "update" | "info" | "list-packages" | "installed" | "install" | "remove"
+
+/**
+ * The `main` function used by Bitburner when the script is being run.
+ * @param ns The Netscript context
+ */
 export async function main(ns: NS) {
     if (!checkFilesystem(ns)) {
         ns.tprintf("WARNING: Filesystem not intialized.")

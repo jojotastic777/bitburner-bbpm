@@ -17,5 +17,5 @@ An experimental package manager for the game Bitburner.
 2. Run `bbpm update`.
 
 ## Other Notes
-- Documentation what exactly your own packages and package lists should consist of can be found at the top of the `src/bin/bbpm.ts` file.
+- Documentation what exactly your own packages and package lists should consist of can be found [here](docs/modules.md).
     - The `official-bbpm` package list at `.bbpm/package-list.json` can also be used as an example.
