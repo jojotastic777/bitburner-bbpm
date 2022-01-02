@@ -2,20 +2,73 @@ import { NS } from "/../NetscriptDefinitions.js"
 
 const DEFAULT_PACKAGE_LIST_URL = "https://raw.githubusercontent.com/jojotastic777/bitburner-bbpm/master/.bbpm/package-list.json"
 
+/**
+ * A reference to a particular package.
+ * @example A PackageReference to the official bbpm package.
+ * bbpm-official/bbpm
+ */
+type PackageReference = string
+
+/**
+ * A package list.
+ * These are how bbpm knows what packages are available for installation.
+ */
 type PackageList = {
+    /**
+     * The name of the package list.
+     */
     name: string
+
+    /**
+     * A list of packages, which bbpm can install.
+     */
     packages: Package[]
 }
 
+/**
+ * A package which bbpm can install.
+ * Intended to represent a single script or library, but can include many scripts and/or libraries.
+ */
 type Package = {
+    /**
+     * The name of the package.
+     */
     name: string
+
+    /**
+     * A brief description of the package.
+     */
     description: string
+
+    /**
+     * The current version of the package.
+     * Not currently used for anything, but may be used to manage updates later.
+     */
     version: string
+
+    /**
+     * The author of the package.
+     */
     author: string
-    dependencies: string[]
+
+    /**
+     * A list of other packages which the package depends on.
+     */
+    dependencies: PackageReference[]
+
+    /**
+     * A Manifest, which tells bbpm how to install the package.
+     */
     manifest: Manifest
 }
 
+/**
+ * A list of script files, as well as where to download them from.
+ * @example The manifest for the `official-bbpm/bbpm` package.
+ * {
+ *     "/bin/bbpm.js": "https://github.com/jojotastic777/bitburner-bbpm/releases/download/v0.1.0/bbpm.js"
+ * }
+ */
 type Manifest = {
     [scriptName: string]: string
 }
