@@ -12,7 +12,7 @@
     "defs": "wget https://github.com/danielyxie/bitburner/raw/dev/src/ScriptEditor/NetscriptDefinitions.d.ts -O NetscriptDefinitions.d.ts",
     "clean": "rm -rf ./dist/*",
     "serve": "serve .",
-    "doc": "typedoc --plugin typedoc-plugin-markdown --entryPointStrategy packages ."
+    "docs": "typedoc --plugin typedoc-plugin-markdown --entryPointStrategy packages ."
   },
   "dependencies": {},
   "devDependencies": {
