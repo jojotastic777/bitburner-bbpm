@@ -151,13 +151,13 @@ function getPackageLists(ns: NS): PackageList[] {
     return rawPackageLists.map(data => JSON.parse(data))
 }
 
-function resolvePackageRef(packageRef: string, packageLists: PackageList[]): Package | undefined {
+function resolvePackageRef(packageRef: PackageReference, packageLists: PackageList[]): Package | undefined {
     let [ listName, packageName ] = packageRef.split("/")
 
     return packageLists.find(pkl => pkl.name === listName)?.packages.find(pkg => pkg.name === packageName)
 }
 
-function resolvePackageDeps(packageRef: string, packageLists: PackageList[]): string[] {
+function resolvePackageDeps(packageRef: PackageReference, packageLists: PackageList[]): PackageReference[] {
 
     let pkg = resolvePackageRef(packageRef, packageLists)
 
@@ -183,7 +183,7 @@ function resolvePackageDeps(packageRef: string, packageLists: PackageList[]): st
     return depsList.filter(d => !depsList.includes(`_unresolvable:${d}`))
 }
 
-async function installPackage(ns: NS, packageRef: string, packageLists: PackageList[]) {
+async function installPackage(ns: NS, packageRef: PackageReference, packageLists: PackageList[]) {
     let pkg: Package | undefined = resolvePackageRef(packageRef, packageLists)
 
     if (pkg === undefined) {
@@ -274,7 +274,7 @@ export async function main(ns: NS) {
     }
 
     if (command === "info") {
-        const packageRef = ns.args[1] as string | undefined
+        const packageRef = ns.args[1] as PackageReference | undefined
 
         if (packageRef === undefined) {
             ns.tprintf("Please specify a package.\n")
@@ -328,7 +328,7 @@ export async function main(ns: NS) {
     }
 
     if (command === "install") {
-        const packageRef = ns.args[1] as string | undefined
+        const packageRef = ns.args[1] as PackageReference | undefined
 
         if (packageRef === undefined) {
             ns.tprintf("Please specify a package.\n")
@@ -345,7 +345,7 @@ export async function main(ns: NS) {
     }
 
     if (command === "remove") {
-        const packageRef = ns.args[1] as string | undefined
+        const packageRef = ns.args[1] as PackageReference | undefined
 
         if (packageRef === undefined) {
             ns.tprintf("Please specify a package.\n")
