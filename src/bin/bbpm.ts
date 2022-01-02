@@ -7,13 +7,13 @@ const DEFAULT_PACKAGE_LIST_URL = "https://raw.githubusercontent.com/jojotastic77
  * @example A PackageReference to the official bbpm package.
  * bbpm-official/bbpm
  */
-type PackageReference = string
+export type PackageReference = string
 
 /**
  * A package list.
  * These are how bbpm knows what packages are available for installation.
  */
-type PackageList = {
+export type PackageList = {
     /**
      * The name of the package list.
      */
@@ -29,7 +29,7 @@ type PackageList = {
  * A package which bbpm can install.
  * Intended to represent a single script or library, but can include many scripts and/or libraries.
  */
-type Package = {
+export type Package = {
     /**
      * The name of the package.
      */
@@ -69,7 +69,7 @@ type Package = {
  *     "/bin/bbpm.js": "https://github.com/jojotastic777/bitburner-bbpm/releases/download/v0.1.0/bbpm.js"
  * }
  */
-type Manifest = {
+export type Manifest = {
     [scriptName: string]: string
 }
 
