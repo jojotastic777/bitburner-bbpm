@@ -24,9 +24,11 @@
 A list of script files, as well as where to download them from.
 
 **`example`** The manifest for the `official-bbpm/bbpm` package.
+```json
 {
     "/bin/bbpm.js": "https://github.com/jojotastic777/bitburner-bbpm/releases/download/v0.1.0/bbpm.js"
 }
+```
 
 #### Index signature
 
@@ -34,7 +36,7 @@ A list of script files, as well as where to download them from.
 
 #### Defined in
 
-[bbpm.ts:72](https://github.com/jojotastic777/bitburner-bbpm/blob/4af6d6d/src/bin/bbpm.ts#L72)
+[bbpm.ts:76](https://github.com/jojotastic777/bitburner-bbpm/blob/54ab210/src/bin/bbpm.ts#L76)
 
 ___
 
@@ -58,7 +60,7 @@ Intended to represent a single script or library, but can include many scripts a
 
 #### Defined in
 
-[bbpm.ts:32](https://github.com/jojotastic777/bitburner-bbpm/blob/4af6d6d/src/bin/bbpm.ts#L32)
+[bbpm.ts:34](https://github.com/jojotastic777/bitburner-bbpm/blob/54ab210/src/bin/bbpm.ts#L34)
 
 ___
 
@@ -78,7 +80,7 @@ These are how bbpm knows what packages are available for installation.
 
 #### Defined in
 
-[bbpm.ts:16](https://github.com/jojotastic777/bitburner-bbpm/blob/4af6d6d/src/bin/bbpm.ts#L16)
+[bbpm.ts:18](https://github.com/jojotastic777/bitburner-bbpm/blob/54ab210/src/bin/bbpm.ts#L18)
 
 ___
 
@@ -89,11 +91,13 @@ ___
 A reference to a particular package.
 
 **`example`** A PackageReference to the official bbpm package.
+```
 bbpm-official/bbpm
+```
 
 #### Defined in
 
-[bbpm.ts:10](https://github.com/jojotastic777/bitburner-bbpm/blob/4af6d6d/src/bin/bbpm.ts#L10)
+[bbpm.ts:12](https://github.com/jojotastic777/bitburner-bbpm/blob/54ab210/src/bin/bbpm.ts#L12)
 
 ## Functions
 
@@ -115,4 +119,4 @@ The `main` function used by Bitburner when the script is being run.
 
 #### Defined in
 
-[bbpm.ts:260](https://github.com/jojotastic777/bitburner-bbpm/blob/4af6d6d/src/bin/bbpm.ts#L260)
+[bbpm.ts:264](https://github.com/jojotastic777/bitburner-bbpm/blob/54ab210/src/bin/bbpm.ts#L264)
